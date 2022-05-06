@@ -24,4 +24,6 @@ The main challenge in assignment 9 was figuring out how to progressively light u
 
 ### Next Steps 
 1. Make gun cursor change color on links to give more feedback that you can click them. 
-2. Integrate this as a part of a larger writing website. 
+2. Reverse the animations on reset instead of refreshing the page. 
+3. Remove the first word styling after user has moved on to next letter. 
+4. Integrate this as a part of a larger writing website. 
