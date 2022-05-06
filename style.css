@@ -1,0 +1,316 @@
+/* Color Palette */
+:root { 
+    --red: #EE224A;
+    --blue: #0F89CA;
+    --yellow: #F9D930;
+    --green: #22aF4b;
+    --gray: #e2e2e2;
+    --gray2: #848484;
+    --gray3: #b8b8b8;
+    --darkGray:#0F0F0F;
+}
+
+/* Local Fonts */
+@font-face {
+    font-family: 'karrik';
+    src: url(../Karrik-Regular.ttf);
+}
+
+@font-face {	
+    font-family: 'karrik';	
+    font-style: italic;	
+    src: url(../Karrik-Italic.ttf);	
+}
+
+
+/* Display Message if browser is not wide enough */
+.minWidthError {
+    opacity: 0;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    z-index: 200;
+    top: 0;
+    left: 0;
+    overflow-x: hidden;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--darkGray);
+    color: var(--gray);
+    font-family: "karrik";
+    transition: 0.4s opacity;
+    pointer-events: none;
+}
+
+/* Update: Included both width AND height checks */
+@media only screen and (max-width: 890px),
+            screen and (max-height: 500px) {
+    .minWidthError {
+      opacity: 100%;
+    }
+}
+
+@media (max-width: 450px),
+       (height: 400px) {
+    .minWidthError p {
+      width: 280px;
+    }
+}
+
+/* Window */
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    cursor: url("cursor.png"), default;
+}
+
+body {
+    background: var(--darkGray);
+    letter-spacing: 1px;
+    margin-bottom: 100px;
+    animation: fadeInAnimation ease 3s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+/* Animation */
+
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+    }
+    100% {
+
+        opacity: 1;
+     }
+}
+
+@keyframes fadeInUp {
+    0% {
+        transform: translate3d(0, 10px, 0);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translate3d(0, 0, 0);
+        opacity: 1;
+    }
+}
+
+.fadeInUp {
+    animation: fadeInUp 1s;
+}
+
+/*Modal 
+  Update: Styled modal to fit with the site theme more
+*/
+.about.modal {
+    border-radius: 0;
+    border: 1px solid var(--gray); 
+    line-height: 18px;
+    padding: 0;
+    font-family: 'karrik';
+}
+
+.about h3 {
+    margin: 0;
+    padding: 15px;
+    color: var(--gray);
+    font-size: 18px;
+    letter-spacing: 2px;
+    background: var(--darkGray);
+    border-bottom: 1px solid var(--gray); 
+} 
+
+.about.modal p { 
+    padding: 20px 30px;
+    background: var(--darkGray);
+    color: var(--gray3);
+}
+
+.modal a {
+    color: var(--gray);
+}
+
+.modal a:hover {
+    color: var(--red);
+}
+
+#footnote{
+    color: var(--gray2);
+}
+
+/* Header */
+.titleContainer {
+    font-family: 'karrik';
+    font-size: 2.5vw;
+    color: var(--gray2);
+    margin-top: 2.5vw;
+    border-top: solid;
+    border-bottom: solid;
+}
+
+.titleContainer h1 {
+    display: inline-block;
+    padding-left: 5vw;
+}
+
+.titleContainer a {
+    font-size: 1vw;
+    color: var(--gray2);
+    margin: 2.5vw 2vw 0vw 0vw;
+    text-decoration: none;
+    border-bottom: solid 1px;
+    float: right;
+}
+
+.titleContainer a:hover {
+    color: var(--gray);
+}
+
+/* Alphabet styling */
+.alphabetContainer {
+    margin: 0;
+    position: absolute;
+    top: 20%;
+    left: 15%;
+}
+
+.letterRow {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: flex-start;
+    padding-top: 2vh;
+}
+
+.letter {
+    font-size: 5vw;
+    font-family: 'karrik';
+    color: var(--gray);
+    padding-left: 10px;
+    padding-right: 20px;
+}
+
+.letter.locked {
+    color: var(--gray2);
+}
+
+/* Change color and rotate letters on hover */
+.red.activated {
+    color: var(--red);
+    transform: scale(1.05) rotate(-6deg);
+    transition-duration: 0.3s;
+}
+
+.red.unactivated {
+    color: var(--red);
+    transform: scale(1) rotate(6deg);
+    transition-duration: 0.3s;
+}
+
+.blue.activated {
+    color: var(--blue);
+    transform: scale(1.05) rotate(6deg); 
+    transition-duration: 0.3s;
+}
+
+.yellow.activated {
+    color: var(--yellow);
+    transform: scale(1.05) rotate(-6deg);
+    transition-duration: 0.3s;
+}
+
+.green.activated {
+    color: var(--green);
+    transform: scale(1.05) rotate(6deg); 
+    transition-duration: 0.3s;
+}
+
+/* Poem text styling */
+.poemContainer {
+    font-size: 1vw;
+    font-family: 'karrik';
+    position: absolute;
+    top: 24%;
+    left: 65%;
+    color: var(--gray);
+}
+
+.poemStanzaItalic {
+    font-style: italic;
+    margin-top: 5%;
+}
+
+.poemStanzaRegular {
+    font-style: regular;
+    margin-top: 5%;
+}
+
+.instructions {
+    margin: 15vw 0vw 0vw 2vw;
+    letter-spacing: 2px;
+    line-height: 19px;
+}
+
+.instructions h3 {
+    margin-top: 1vw;
+}
+
+.poem {
+    display: none;
+}
+
+.first-red {
+    color: var(--red);
+}
+
+.first-blue {
+    color: var(--blue);
+}
+
+.first-yellow {
+    color: var(--yellow);
+}
+
+.first-green {
+    color: var(--green);
+}
+
+/* Reset Button 
+   Update: Changed into a button that only appears
+   after the user has went through the entire poem */
+
+.reset {
+    display: none;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    padding: 0.5vw;
+    background-color: var(--gray);
+    text-align: right;
+}
+
+.reset button {
+    margin-right: 3vw;
+    font-family: 'karrik';
+    padding: 8px;
+    background-color: var(--darkGray);
+    color: var(--gray);
+    border: 2px solid var(--gray);
+    border-radius: 6px;
+    transition-duration: 0.3s;
+}
+
+.reset button:hover {
+    background-color: var(--gray);
+    color: var(--darkGray);
+    border: 2px solid var(--darkGray);
+}

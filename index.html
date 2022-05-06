@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <title>The Alphabet Drill</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    
+    </head>
+    <body>
+        <div class="minWidthError">
+            <p>This piece is best viewed in a wider browser window.</p>
+        </div>
+        
+        <!-- Learn More Modal -->
+        <!-- Update: Added more explanation about the website -->
+        <div id="about" class="about modal">
+            <h3>ABOUT THIS SITE</h3>
+            <p>
+                This poem was written as a companion to 
+                Autumn Blaylock's artwork <i>"The Slaughter of 
+                the songbirds: Red, White, and Blue"</i>
+                after the Parkland school shooting at 
+                Stoneman Douglas High school on
+                February 14, 2018. You can view the piece on her 
+                <a href="https://www.musseyart.com/slaughter-of-the-songbirds">
+                portfolio site.</a>  
+                <br></br>
+                Please learn more about how you can 
+                <a href="https://www.everytown.org/actions/">
+                take action to promote gun safety</a> in your
+                community today. 
+                <br></br>               
+
+                <i id="footnote">Note: This website is just one part of a larger
+                interactive writing portfolio website I am 
+                putting together. More pieces will be added later on.</i>              
+            </p>
+        </div>
+
+        <!-- Header -->
+        <div class="titleContainer">
+            <h1>THE ALPHABET DRILL</h1>
+            <a href="#about" rel="modal:open">Learn More</a>
+        </div>
+        
+        <!-- Alphabet -->
+        <div class="alphabetContainer">
+            <div class=letterRow>
+                <p class="letter red" id="a">Aa</p>
+                <p class="letter blue locked" id="b">Bb</p>
+                <p class="letter yellow locked" id="c">Cc</p>
+                <p class="letter green locked" id="d">Dd</p>
+                
+            </div>
+
+            <div class=letterRow>
+                <p class="letter red locked" id="e">Ee</p>
+                <p class="letter blue locked" id="f">Ff</p>
+                <p class="letter yellow locked" id="g">Gg</p>
+                <p class="letter green locked" id="h">Hh</p>
+            </div>
+
+            <div class=letterRow>
+                <p class="letter red locked" id="i">Ii</p>
+                <p class="letter blue locked" id="j">Jj</p>
+                <p class="letter yellow locked" id="k">Kk</p>
+                <p class="letter green locked" id="l">Ll</p>
+                <p class="letter red locked" id="m">Mm</p>
+                <p class="letter blue locked" id="n">Nn</p>
+            </div>
+
+            <div class=letterRow>
+                <p class="letter yellow locked" id="o">Oo</p>
+                <p class="letter green locked" id="p">Pp</p>
+                <p class="letter red locked" id="q">Qq</p>
+                <p class="letter blue locked" id="r">Rr</p>
+                <p class="letter yellow locked" id="s">Ss</p>
+            </div>
+
+            <div class=letterRow>
+                <p class="letter green locked" id="t">Tt</p>
+                <p class="letter red locked" id="u">Uu</p>
+                <p class="letter blue locked" id="v">Vv</p>
+                <p class="letter yellow locked" id="w">Ww</p>
+                <p class="letter green locked" id="x">Xx</p>
+            </div>
+
+            <div class=letterRow>
+                <p class="letter red locked" id="y">Yy</p>
+                <p class="letter blue locked" id="z">Zz</p>
+            </div>
+        </div>
+
+        <!-- Poem -->
+        <div class="poemContainer">
+
+            <!--Update: More instructions/flavortext-->
+            <div class="instructions animate__animated animate__fadeInUp">
+                <h2>Welcome to the classroom.</h2>
+                <h3><i>
+                    Hover over the first letter of the
+                    <br>alphabet on the left to begin.
+                </i></h3>
+            </div>
+
+            <div class="poemStanzaItalic">
+                <p class="poem redP fadeInUp" id="aLine">Abide by the rules.</p>
+                <p class="poem blueP fadeInUp" id="bLine">Barricade the classroom door.</p>
+                <p class="poem yellowP fadeInUp" id="cLine">Close your mouth. Stay quiet.</p>
+                <p class="poem greenP fadeInUp" id="dLine">Do not make a sound.</p>
+            </div>
+    
+            <div class="poemStanzaRegular">
+                <p class="poem redP fadeInUp" id="eLine">Every day students recite this chant,</p>
+                <p class="poem blueP fadeInUp" id="fLine">Fervently and firm. Dazed, they</p>
+                <p class="poem yellowP fadeInUp" id="gLine">Give way to routine—</p>
+                <p class="poem greenP fadeInUp" id="hLine">How comforting it is!</p>
+            </div>
+    
+            <div class="poemStanzaRegular">
+                <p class="poem redP fadeInUp" id="iLine">Idyllic days stretch onward, as</p>
+                <p class="poem blueP fadeInUp" id="jLine">Joyful lessons</p>
+                <p class="poem yellowP fadeInUp" id="kLine">Kidnap uneasiness and</p>
+                <p class="poem greenP fadeInUp" id="lLine">Lay it to rest. </p>
+                <p class="poem redP fadeInUp" id="mLine">Miles of tangled worries are knit</p>
+                <p class="poem blueP fadeInUp" id="nLine">Neatly into a blindfold.</p>
+
+            </div>
+    
+            <div class="poemStanzaItalic">
+                <p class="poem yellowP fadeInUp" id="oLine">Obey the rules. don’t</p>
+                <p class="poem greenP fadeInUp" id="pLine">Panic, don’t talk. don’t</p>
+                <p class="poem redP fadeInUp" id="qLine">Question the rules. This is how wev</p>
+                <p class="poem blueP fadeInUp" id="rLine">Reassemble safety and</p>
+                <p class="poem yellowP fadeInUp" id="sLine">Sensibility.</p>
+            </div>
+    
+            <div class="poemStanzaRegular">
+                <p class="poem greenP fadeInUp" id="tLine">Targets on backs go</p> 
+                <p class="poem redP fadeInUp" id="uLine">Unaddressed.</p>
+                <p class="poem blueP fadeInUp" id="vLine">Victims of blissful ignorance, too</p>
+                <p class="poem yellowP fadeInUp" id="wLine">Weary to feign alarm when</p>
+                <p class="poem greenP fadeInUp" id="xLine">X-ray machines transform into doors.</p>                
+            </div>
+    
+            <div class="poemStanzaRegular">
+                <p class="poem redP fadeInUp" id="yLine">Yesterday’s rationality dissolves. Today is the </p>         
+                <p class="poem blueP fadeInUp" id="zLine">Zenith of disarray.</p>
+            </div>
+        </div>
+
+        
+        <div class="reset fadeInUp">
+            <button onclick="window.location='index.html';">Reset?</button>
+        </div>
+       
+    <!--Scripts-->
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+    <script src="main.js" type="text/javascript"></script>
+    <!-- jQuery Modal -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
+    </body>
+</html>
